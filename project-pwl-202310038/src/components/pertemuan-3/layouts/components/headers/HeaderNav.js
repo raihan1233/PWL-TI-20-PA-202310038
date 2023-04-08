@@ -2,10 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 export default function HeaderNav() {
-    const menuList = [{ id: 1, name: "Home", path: "/home", icon:"bi bi-house-door" },
-                      { id: 2, name: "Explore", path: "/explore", icon:"bi bi-compass" },
-                      { id: 3, name: "Messages", path: "/messages", icon:"bi bi-send" },
-                      { id: 4, name: "Log Out", path: "/log-out", icon:"bi bi-box-arrow-left" }];
+    const menuList = [{ id: 1, name: "Home", path: "/home", icon:"bi-house-door" },
+                      { id: 2, name: "Explore", path: "/explore", icon:"bi-compass" },
+                      { id: 3, name: "Messages", path: "/messages", icon:"bi-send" },
+                      { id: 4, name: "Log Out", path: "/log-out", icon:"bi-box-arrow-left" }];
     return (
         <header>
             <nav className="navbar navbar-expand-md fixed-top shadow bg-white">
@@ -23,14 +23,10 @@ export default function HeaderNav() {
                                 <ul className="navbar-nav me-auto mb-2 mb-md-0">
                                     {menuList.map((v, index) => (
                                         <li className="nav-item me-1" key={index}>
-                                            {/* <NavLink className="nav-link text-hover-success px-3" to={v.path}>
+                                            <NavLink className="nav-link text-hover-success px-3" to={v.path}>
                                                 <i className={"bi me-2 fs-5 text-dark "+v.icon}></i>
                                                 {v.name}
-                                            </NavLink> */}
-                                            <a className='nav-link text-hover-success px-3' href={v.path}>
-                                                <i className={"bi me-2 fs-5 text-dark"+ v.icon}></i>
-                                                {v.name}
-                                            </a>
+                                            </NavLink>
                                         </li>
                                     ))}
                                 </ul>
